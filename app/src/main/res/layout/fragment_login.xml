@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gains_boro"
+    android:padding="32dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guide" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/collective"
+        android:textColor="@color/color_nero"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/welcome"
+        android:textColor="@color/color_grey_suit"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOpenESI"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/bg_button_gray_radius_6"
+        android:drawableStart="@drawable/ic_esi"
+        android:fontFamily="@font/rubik_medium"
+        android:paddingHorizontal="72dp"
+        android:text="@string/text_ESI"
+        android:textAllCaps="false"
+        android:textColor="@color/color_nero"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/or"
+        android:textColor="@color/color_grey_suit"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOpenESI" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/color_zum_thor"
+        app:layout_constraintBottom_toBottomOf="@id/tvOr"
+        app:layout_constraintEnd_toStartOf="@id/tvOr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvOr" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="12dp"
+        android:background="@color/color_zum_thor"
+        app:layout_constraintBottom_toBottomOf="@id/tvOr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvOr"
+        app:layout_constraintTop_toTopOf="@+id/tvOr" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etLogin"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_edit_text"
+        android:fontFamily="@font/rubik"
+        android:hint="@string/edit_text_login_hint"
+        android:inputType="textEmailAddress"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:paddingHorizontal="18dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOr" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_edit_text"
+        android:fontFamily="@font/rubik"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:paddingHorizontal="18dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etLogin" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivShowPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_password_visibility_off"
+        app:layout_constraintBottom_toBottomOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="@id/etPassword"
+        app:layout_constraintTop_toTopOf="@id/etPassword" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvErrorPasswordOrLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/error_login_or_password"
+        android:textColor="@color/color_salmon"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_button_gray_radius_6"
+        android:backgroundTint="@color/color_medium_slate_blue"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvErrorPasswordOrLogin" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_real_soft_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNext"
+        app:layout_constraintVertical_bias="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

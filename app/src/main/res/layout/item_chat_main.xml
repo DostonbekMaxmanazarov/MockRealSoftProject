@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="14dp"
+    android:paddingTop="14dp"
+    tools:ignore="RtlSymmetry">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivPersonPhoto"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/im_person_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/flores_juanita"
+        android:textColor="@color/color_nero"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/ivPersonPhoto"
+        app:layout_constraintTop_toTopOf="@id/ivPersonPhoto" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCheck"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="2dp"
+        android:src="@drawable/ic_check"
+        app:layout_constraintBottom_toBottomOf="@id/tvTime"
+        app:layout_constraintEnd_toStartOf="@id/tvTime"
+        app:layout_constraintTop_toTopOf="@id/tvTime" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/time"
+        android:textColor="@color/color_grey_suit"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivPersonPhoto" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvYou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/you"
+        android:textColor="@color/color_nero"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivPersonPhoto"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="14dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/rubik"
+        android:maxLines="2"
+        android:text="@string/message"
+        android:textColor="@color/color_grey_suit"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/tvMessageCount"
+        app:layout_constraintStart_toEndOf="@id/ivPersonPhoto"
+        app:layout_constraintTop_toBottomOf="@id/tvYou" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMessageCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_text"
+        android:fontFamily="@font/rubik_medium"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:paddingStart="6dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="3" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:background="@color/color_zum_thor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivPersonPhoto"
+        app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

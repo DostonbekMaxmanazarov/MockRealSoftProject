@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/actionToday"
+        android:enabled="true"
+        android:icon="@drawable/ic_today_dark"
+        android:title="@string/today" />
+    <item
+        android:id="@+id/actionDocuments"
+        android:enabled="true"
+        android:icon="@drawable/ic_documents_light"
+        android:title="@string/documents" />
+    <item
+        android:id="@+id/actionChat"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat_light"
+        android:title="@string/chat" />
+    <item
+        android:id="@+id/actionWorkPlan"
+        android:enabled="true"
+        android:icon="@drawable/ic_work_plan_light"
+        android:title="@string/work_plan" />
+    <item
+        android:id="@+id/actionTask"
+        android:enabled="true"
+        android:icon="@drawable/ic_task_light"
+        android:title="@string/task" />
+</menu>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/layout_app_bar" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/expandableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/appBar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWeekData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appBar"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_week_day" />
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_duration="500"
+            app:el_expanded="false"
+            app:layout_constraintTop_toBottomOf="@id/appBar">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivArrowBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_arrow_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/expandable" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/color_zum_thor"
+            app:layout_constraintTop_toBottomOf="@id/ivArrowBottom" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expandableLayout"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_new_task" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivNewTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:src="@drawable/ic_new_task"
+        app:layout_constraintBottom_toBottomOf="@id/tvNewTask"
+        app:layout_constraintEnd_toStartOf="@id/tvNewTask"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvNewTask" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNewTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/new_task"
+        android:textColor="@color/color_medium_slate_blue"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivNewTask"
+        app:layout_constraintTop_toBottomOf="@id/rv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

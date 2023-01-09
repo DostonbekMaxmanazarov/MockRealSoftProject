@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:layout_marginStart="120dp"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/bg_right_corner"
+    android:paddingVertical="12dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="24dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_play_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.masoudss.lib.WaveformSeekBar
+        android:id="@+id/waveSeekbar"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivPlay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:wave_background_color="@color/color_grey_suit"
+        app:wave_corner_radius="2dp"
+        app:wave_gravity="center"
+        app:wave_gap="1dp"
+        app:wave_min_height="5dp"
+        app:marker_width="1dp"
+        app:wave_progress_color="@color/color_nero"
+        app:wave_width="3dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAudioTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik"
+        android:text="@string/time"
+        android:textColor="@color/color_grey_suit"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivPlay"
+        app:layout_constraintTop_toBottomOf="@id/ivPlay" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik"
+        android:text="@string/time"
+        android:textColor="@color/color_grey_suit"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPlay" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="6dp"
+        android:src="@drawable/ic_check"
+        app:layout_constraintBottom_toBottomOf="@id/tvTime"
+        app:layout_constraintEnd_toStartOf="@id/tvTime"
+        app:layout_constraintTop_toTopOf="@id/tvTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

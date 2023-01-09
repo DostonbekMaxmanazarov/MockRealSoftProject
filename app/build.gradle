@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -30,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -41,4 +46,23 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    /**
+     * Circle ImageView
+     * */
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    /**
+     * Fragment
+     * */
+    implementation("androidx.fragment:fragment-ktx:1.5.5")
+
+    implementation  'com.github.massoudss:waveformSeekBar:5.0.2'
+
+    implementation 'com.github.lincollincol:amplituda:2.2.2'
+
+    implementation 'com.github.cachapa:ExpandableLayout:2.9.2'
+
+    implementation 'com.google.dagger:hilt-android:2.42'
+    kapt 'com.google.dagger:hilt-compiler:2.42'
 }

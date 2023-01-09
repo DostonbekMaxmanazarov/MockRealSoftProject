@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingStart="16dp"
+    android:paddingTop="24dp"
+    tools:ignore="RtlSymmetry">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivPersonPhoto"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/im_person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/ic_more_vertical"
+        app:layout_constraintEnd_toEndOf="@id/ivPersonPhoto"
+        app:layout_constraintStart_toStartOf="@id/ivPersonPhoto"
+        app:layout_constraintTop_toBottomOf="@id/ivPersonPhoto" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/name"
+        android:textColor="@color/color_grey_suit"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivPersonPhoto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDateTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/date"
+        android:textColor="@color/color_grey_suit"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNumberCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/edo_096"
+        android:textColor="@color/color_nero"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/ivPersonPhoto"
+        app:layout_constraintTop_toBottomOf="@id/tvFullName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/rubik"
+        android:maxLines="2"
+        android:text="@string/description"
+        android:textColor="@color/color_grey_suit"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivPersonPhoto"
+        app:layout_constraintTop_toBottomOf="@id/tvNumberCode" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_timer"
+        app:layout_constraintStart_toStartOf="@id/tvDescription"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDateBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/date"
+        android:textColor="@color/color_grey_suit"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivTimer"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+        app:layout_constraintTop_toTopOf="@id/ivTimer" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivPersons1"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/im_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivPersons2"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="26dp"
+        android:src="@drawable/im_person_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_zum_thor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivPersonPhoto"
+        app:layout_constraintTop_toBottomOf="@id/tvDateBottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginTop="12dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_background"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCheck"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:padding="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_success_white"
+        android:src="@drawable/ic_check_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMore"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="15dp"
+        android:padding="2dp"
+        android:src="@drawable/ic_more_vertical"
+        app:layout_constraintEnd_toEndOf="@id/ivCheck"
+        app:layout_constraintStart_toStartOf="@id/ivCheck"
+        app:layout_constraintTop_toBottomOf="@id/ivCheck" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/new_task_message"
+        android:textColor="@color/color_nero"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivCheck"
+        app:layout_constraintTop_toTopOf="@id/ivCheck" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_play_circle"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/ivCheck"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.masoudss.lib.WaveformSeekBar
+        android:id="@+id/waveSeekbar"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivPlay"
+        app:layout_constraintTop_toTopOf="@id/ivPlay"
+        app:marker_width="1dp"
+        app:wave_background_color="@color/color_grey_suit"
+        app:wave_corner_radius="2dp"
+        app:wave_gap="1dp"
+        app:wave_gravity="center"
+        app:wave_min_height="5dp"
+        app:wave_progress_color="@color/color_nero"
+        app:wave_width="3dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/rubik"
+        android:paddingTop="16dp"
+        android:text="@string/time"
+        android:textColor="@color/color_salmon"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivPhoto1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/im_person_3"
+        app:layout_constraintStart_toEndOf="@id/ivMore"
+        app:layout_constraintTop_toBottomOf="@id/ivMore" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivPhoto2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/im_person"
+        app:layout_constraintStart_toEndOf="@id/ivMore"
+        app:layout_constraintTop_toBottomOf="@id/ivMore" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
